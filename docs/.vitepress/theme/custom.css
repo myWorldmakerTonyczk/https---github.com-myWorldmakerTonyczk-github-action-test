@@ -1,0 +1,113 @@
+/* === 侧边栏实际宽度 === */
+:root {
+  --vp-sidebar-width: 180px;
+}
+
+/* 覆盖 VitePress 的响应式宽度计算，用固定宽度 */
+.VPSidebar {
+  width: 180px !important;
+  padding-left: 20px !important;
+  padding-right: 0 !important;
+}
+
+.VPSidebar .group .text {
+  padding-left: 0 !important;
+}
+
+.VPSidebar .VPSidebarItem .item {
+  padding-left: 0 !important;
+}
+
+/* 导航栏标题区宽度同步 */
+.VPNavBar.has-sidebar .title {
+  width: 180px !important;
+  padding-left: 20px !important;
+  background-color: var(--vp-c-bg) !important;
+}
+
+/* 导航栏内容区左边距同步 */
+.VPNavBar.has-sidebar .content {
+  padding-left: 200px !important;
+}
+
+/* 页面内容区左边距同步（加 20px 间距） */
+.VPContent.has-sidebar {
+  padding-left: 200px !important;
+}
+
+/* 本地导航栏左边距同步 */
+.VPLocalNav.has-sidebar {
+  padding-left: 200px !important;
+}
+
+/* 导航栏分割线左边距同步 */
+.VPNavBar.has-sidebar .divider {
+  padding-left: 200px !important;
+}
+
+/* 页面内容不被导航遮挡 */
+.VPContent.has-sidebar .VPPage {
+  padding-top: 24px;
+}
+
+/* === 折叠按钮 === */
+.sidebar-toggle-btn {
+  position: fixed;
+  left: 166px;
+  top: 50%;
+  z-index: 100;
+  width: 24px;
+  height: 48px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 0 6px 6px 0;
+  background: var(--vp-c-bg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+  transition: left 0.3s, opacity 0.3s;
+}
+
+.sidebar-toggle-btn:hover {
+  color: var(--vp-c-brand);
+  border-color: var(--vp-c-brand);
+}
+
+/* === 折叠状态 === */
+.sidebar-collapsed .VPSidebar {
+  width: 0 !important;
+  padding-left: 0 !important;
+}
+
+.sidebar-collapsed .VPNavBar.has-sidebar .title {
+  width: 0 !important;
+  padding-left: 0 !important;
+  overflow: hidden;
+}
+
+.sidebar-collapsed .VPNavBar.has-sidebar .content {
+  padding-left: 20px !important;
+}
+
+.sidebar-collapsed .VPContent.has-sidebar {
+  padding-left: 20px !important;
+}
+
+.sidebar-collapsed .VPLocalNav.has-sidebar {
+  padding-left: 20px !important;
+}
+
+.sidebar-collapsed .VPNavBar.has-sidebar .divider {
+  padding-left: 20px !important;
+}
+
+.sidebar-collapsed .sidebar-toggle-btn {
+  left: 6px;
+}
+
+.sidebar-collapsed .sidebar-toggle-btn .arrow {
+  display: inline-block;
+  transform: rotate(180deg);
+}

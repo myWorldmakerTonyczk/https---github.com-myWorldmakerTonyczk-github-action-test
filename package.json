@@ -1,0 +1,26 @@
+{
+  "name": "oss-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myWorldmakerTonyczk/oss-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/myWorldmakerTonyczk/oss-blog/issues"
+  },
+  "homepage": "https://github.com/myWorldmakerTonyczk/oss-blog#readme",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
