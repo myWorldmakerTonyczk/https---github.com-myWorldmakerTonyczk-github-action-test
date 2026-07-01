@@ -1,10 +1,15 @@
 on: push
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
     job1:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v4
             - run: pwd
             - run: npm install
             - run: npm run docs:build
